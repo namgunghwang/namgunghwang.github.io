@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>BurnCut — OAuth Verification Demo Slides</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    min-height: 100%;
+    background: #0A0A0A;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Pretendard", sans-serif;
+    padding: 64px 32px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 40px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+  h1 span { color: #FF4D1C; }
+  .sub { font-size: 18px; color: #888; margin-bottom: 48px; line-height: 1.6; }
+  .list { display: grid; gap: 16px; }
+  .item {
+    display: flex; align-items: center; gap: 20px;
+    padding: 24px 28px;
+    background: #161616;
+    border: 1px solid #2A2A2A;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .item:hover { border-color: #FF4D1C; transform: translateY(-2px); }
+  .num {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgba(255,77,28,0.12);
+    color: #FF4D1C;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 20px;
+    flex-shrink: 0;
+  }
+  .body { flex: 1; }
+  .title { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+  .desc { font-size: 14px; color: #888; }
+  .arrow { color: #555; font-size: 20px; }
+  .footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid #222;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+  }
+  .footer a { color: #FF4D1C; text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Burn<span>Cut</span> — OAuth Demo Slides</h1>
+    <div class="sub">
+      Google OAuth 검증(youtube.upload &amp; youtube.readonly) 데모 영상 녹화에 사용하는 슬라이드 3개.<br>
+      녹화 시 풀스크린(Cmd + Shift + F)으로 띄워두고 사용합니다.
+    </div>
+
+    <div class="list">
+      <a class="item" href="./1_intro.html" target="_blank" rel="noopener">
+        <div class="num">1</div>
+        <div class="body">
+          <div class="title">Intro — BurnCut 로고 화면</div>
+          <div class="desc">녹화 0:00–0:08 구간 · 8초 노출</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="item" href="./2_scopes.html" target="_blank" rel="noopener">
+        <div class="num">2</div>
+        <div class="body">
+          <div class="title">Requested Scopes — youtube.upload &amp; readonly 설명</div>
+          <div class="desc">녹화 0:08–0:22 구간 · 14초 노출</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="item" href="./3_outro.html" target="_blank" rel="noopener">
+        <div class="num">3</div>
+        <div class="body">
+          <div class="title">Outro — Privacy &amp; Safety 요약</div>
+          <div class="desc">녹화 2:00–2:10 구간 · 10초 노출</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+
+    <div class="footer">
+      Project: <a href="https://burncut.kr">burncut.kr</a> ·
+      Privacy: <a href="https://namgunghwang.github.io/privacy">/privacy</a><br>
+      이 페이지는 BurnCut의 Google OAuth 검증 절차를 위한 내부 자료입니다.
+    </div>
+  </div>
+</body>
+</html>

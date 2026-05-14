@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Requested Scopes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    min-height: 100%;
+    background: #0A0A0A;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 48px;
+  }
+  .wrap {
+    max-width: 1200px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  .sub {
+    font-size: 24px;
+    color: #888;
+    margin-bottom: 56px;
+  }
+  .scope {
+    background: #161616;
+    border: 1px solid #2A2A2A;
+    border-radius: 16px;
+    padding: 32px 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(255, 77, 28, 0.12);
+    color: #FF4D1C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .scope-body { flex: 1; }
+  .scope-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    font-family: "SF Mono", Menlo, Monaco, monospace;
+  }
+  .scope-purpose {
+    font-size: 20px;
+    color: #B0B0B0;
+    line-height: 1.5;
+  }
+  .footer {
+    margin-top: 48px;
+    padding: 24px 32px;
+    background: #0F0F0F;
+    border-left: 4px solid #FF4D1C;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #DDD;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Requested OAuth Scopes</h1>
+    <div class="sub">BurnCut requests two scopes for one purpose — one-click publishing to the user's own YouTube channel.</div>
+
+    <div class="scope">
+      <div class="icon">U</div>
+      <div class="scope-body">
+        <div class="scope-name">youtube.upload</div>
+        <div class="scope-purpose">Publish AI-generated short-form videos to the authenticated user's own YouTube channel — only on explicit user action, only as private.</div>
+      </div>
+    </div>
+
+    <div class="scope">
+      <div class="icon">R</div>
+      <div class="scope-body">
+        <div class="scope-name">youtube.readonly</div>
+        <div class="scope-purpose">Verify the connected channel and reflect connection status in BurnCut's UI. No content listing, copying, or redistribution.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <strong>No background uploads.</strong> Every publish requires an explicit click. Tokens are encrypted at rest and revocable at any time.
+    </div>
+  </div>
+</body>
+</html>
