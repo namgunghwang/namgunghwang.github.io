@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITPASS - 개인정보처리방침</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #121212; color: #e0e0e0;
+            line-height: 1.7; padding: 40px 20px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { color: #fff; font-size: 28px; margin-bottom: 8px; }
+        .subtitle { color: #888; font-size: 14px; margin-bottom: 40px; }
+        h2 { color: #3DD7C0; font-size: 18px; margin: 32px 0 12px; }
+        p, li { font-size: 15px; color: #ccc; margin-bottom: 8px; }
+        ul { padding-left: 20px; }
+        a { color: #3DD7C0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #333; color: #666; font-size: 13px; }
+        .footer a { color: #3DD7C0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FITPASS 개인정보처리방침</h1>
+        <p class="subtitle">시행일: 2026년 7월 24일 | 최종 수정: 2026년 7월 24일</p>
+
+        <p>우드번스튜디오(대표 남궁황, 이하 "회사")는 <strong>FITPASS</strong>(생활스포츠지도사 보디빌딩 학습 앱, 이하 "앱")를 운영하며, 「개인정보 보호법」 제30조에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속히 처리하기 위해 본 개인정보처리방침을 둡니다.</p>
+
+        <h2>1. 핵심 요약 (한눈에)</h2>
+        <ul>
+            <li><strong>FITPASS는 계정·로그인이 없는 로컬 우선 앱</strong>입니다. 회사는 이용자의 이름·이메일 등 개인정보를 <strong>자체 서버로 수집·저장하지 않습니다.</strong></li>
+            <li>학습 기록(진도·오답노트·즐겨찾기·닉네임·광고 제거 구매 상태)은 <strong>이용자 기기 안(drift / shared_preferences)에만 저장</strong>되며 외부로 전송되지 않습니다.</li>
+            <li>광고 제공을 위해 <strong>제3자 광고 SDK(Google AdMob)</strong>가 광고 식별자 등 일부 정보를 수집할 수 있습니다.</li>
+            <li>결제(광고 제거)는 <strong>Google Play / App Store가 처리</strong>하며, 회사는 결제수단 정보를 수집하지 않습니다.</li>
+        </ul>
+
+        <h2>2. 수집하는 개인정보 항목 및 방법</h2>
+        <ul>
+            <li><strong>회사 자체 수집: 없음</strong> — 회원가입·로그인·이름·연락처 등을 수집하지 않습니다.</li>
+            <li><strong>기기 내 저장(외부 전송 없음)</strong>: 학습 진도, 오답노트, 즐겨찾기, 닉네임, 광고 제거 구매 상태. 이 데이터는 기기 로컬 저장소(drift / shared_preferences)에만 보관되며, 앱 삭제 시 함께 삭제됩니다.</li>
+            <li><strong>제3자 SDK를 통한 자동 수집</strong>
+                <ul>
+                    <li><strong>광고 — Google AdMob</strong>: 광고 식별자(Android 광고 ID / Apple IDFA), 기기·앱 사용 정보, 대략적 위치(IP 기반) 등을 맞춤형·측정 목적으로 수집·처리할 수 있습니다. 처리 주체는 Google이며 <a href="https://policies.google.com/technologies/ads" target="_blank">Google 광고·개인정보처리방침</a>을 따릅니다.</li>
+                    <li><strong>인앱결제 — Google Play / Apple App Store</strong>: 광고 제거(remove_ads) 상품 구매 시 결제는 각 스토어가 처리하며, 회사는 카드번호 등 결제정보를 받지 않습니다.</li>
+                    <li>(향후 도입 시 고지) 앱 사용성·안정성 분석용 SDK(Firebase Analytics / Crashlytics 등)를 추가하는 경우 본 방침을 갱신합니다.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. 이용 목적</h2>
+        <ul>
+            <li>맞춤형 광고 노출 및 광고 성과 측정(AdMob)</li>
+            <li>광고 제거(remove_ads) 구매 확인 및 유지(비소모성)</li>
+            <li>앱 기능 제공(학습 진도·오답 관리 등, 기기 로컬)</li>
+        </ul>
+
+        <h2>4. 보유 및 이용 기간</h2>
+        <ul>
+            <li>회사가 자체 보유하는 개인정보는 없습니다.</li>
+            <li>기기 로컬 데이터는 이용자가 앱을 삭제하면 제거됩니다.</li>
+            <li>제3자(Google 등)가 수집한 정보의 보유·이용은 해당 사업자의 정책에 따릅니다.</li>
+        </ul>
+
+        <h2>5. 제3자 제공 및 처리위탁</h2>
+        <ul>
+            <li><strong>Google LLC</strong> — 광고 제공·측정(AdMob), 인앱결제(Google Play)</li>
+            <li><strong>Apple Inc.</strong> — 인앱결제(App Store)</li>
+            <li>회사는 위 목적 외로 개인정보를 제3자에게 제공하지 않습니다.</li>
+        </ul>
+
+        <h2>6. 이용자의 권리와 행사 방법</h2>
+        <ul>
+            <li><strong>광고 식별자 재설정/삭제</strong>: 기기 설정 → 광고(Android: 광고 ID 삭제 / iOS: 추적 허용 off)</li>
+            <li><strong>로컬 데이터 삭제</strong>: 앱 삭제 또는 앱 내 초기화</li>
+            <li><strong>광고 제거</strong>: 인앱결제(remove_ads) 구매</li>
+            <li>문의는 아래 보호책임자 연락처로 가능합니다.</li>
+        </ul>
+
+        <h2>7. 만 14세 미만 아동</h2>
+        <p>본 앱은 자격시험(생활스포츠지도사) 준비용으로 <strong>만 14세 미만 아동을 주 대상으로 하지 않으며</strong>, 회사는 만 14세 미만 아동의 개인정보를 수집하지 않습니다.</p>
+
+        <h2>8. 안전성 확보 조치</h2>
+        <p>최소 수집 원칙(회사 자체 수집 없음), 로컬 저장, 제3자 SDK는 공식 배포판만 사용합니다.</p>
+
+        <h2>9. 개인정보 보호책임자</h2>
+        <ul>
+            <li>성명: 남궁황</li>
+            <li>이메일: hwangi_@naver.com</li>
+        </ul>
+
+        <h2>10. 고지 의무</h2>
+        <p>본 방침이 변경되는 경우 앱 내 또는 회사 웹사이트를 통해 변경 사유·내용을 공지합니다.</p>
+
+        <div class="footer">
+            <p><strong>사업자 정보</strong></p>
+            <p>상호: 우드번스튜디오 / 대표: 남궁황 / 사업자등록번호: 133-15-67848</p>
+            <p>통신판매업 신고: 제 2026-서울도봉-0568 호</p>
+            <p>소재지: 서울특별시 도봉구 노해로67길 2, 한국빌딩 B2층 H-129호</p>
+            <p style="margin-top:16px;"><a href="terms-of-service.html">이용약관 보기 &rarr;</a></p>
+            <p style="margin-top:16px;">&copy; 2026 우드번스튜디오. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
