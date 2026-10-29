@@ -1,0 +1,54 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>손님왔냥 — 같은 판 하러 가기</title>
+<meta name="description" content="오늘의 매대는 모두 같은 판! 같은 물건 3개를 모아 치우는 고양이 가게 퍼즐 — 친구랑 같은 판으로 겨뤄 보세요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="손님왔냥">
+<meta property="og:title" content="손님왔냥 — 같은 판, 너도 해 볼래?">
+<meta property="og:description" content="오늘의 매대는 모두 같은 판! 같은 물건 3개를 모아 치우는 고양이 가게 퍼즐">
+<meta property="og:image" content="https://namgunghwang.github.io/sonnimnyang/play/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://namgunghwang.github.io/sonnimnyang/play/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<style>
+body{margin:0;word-break:keep-all;font-family:-apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif;color:#3B2A1A;background:#FFF6E8;text-align:center}
+main{max-width:480px;margin:0 auto;padding:24px 16px 40px}
+.hero{width:100%;border-radius:18px;border:2px solid #E2C9A0;display:block}
+.top{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 6px}
+.top img{width:56px;height:56px;border-radius:14px}
+h1{margin:0;color:#E5483B;font-size:28px}
+.day{display:inline-block;margin:10px 0 4px;padding:6px 14px;border-radius:99px;background:#fff;border:1px solid #E2C9A0;font-weight:700}
+p{line-height:1.6;margin:8px 0}
+.sub{color:#8A7058;font-size:15px}
+.btn{display:block;margin:12px 0;padding:16px;border-radius:16px;font-size:18px;font-weight:800;text-decoration:none;color:#fff;background:#3FA36B;box-shadow:0 5px 0 #2C7A4F}
+.btn.ios{background:#3B2A1A;box-shadow:0 5px 0 #000}
+.note{color:#8A7058;font-size:13px;margin-top:18px}
+</style></head>
+<body><main>
+<img class="hero" src="hero.jpg" alt="손님왔냥 가게 — 고양이 점원과 기뻐하는 손님들">
+<div class="top"><img src="icon.png" alt=""><h1>손님왔냥</h1></div>
+<div class="day" id="day">오늘의 매대</div>
+<p><b>오늘의 매대는 모두 같은 판이에요.</b><br>친구와 같은 판으로 겨뤄 보세요.</p>
+<p class="sub">같은 물건 3개를 모아 치우는 고양이 가게 퍼즐</p>
+<a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.wouldburnstudio.sonnimnyang">구글 플레이에서 같은 판 하러 가기</a>
+<a class="btn ios" id="ios" href="https://apps.apple.com/kr/app/id6827909882">앱 스토어에서 같은 판 하러 가기</a>
+<p class="note">이미 깔려 있으면 스토어에서 「열기」를 누르면 돼요. 홈에서 「오늘의 매대」를 고르세요.</p>
+<p class="note"><a href="../">손님왔냥 고객 지원</a> · 우드번스튜디오</p>
+</main>
+<script>
+// 공유 링크 ?d=YYYY-MM-DD → 「10월 29일 오늘의 매대」. 없거나 이상하면 한국 날짜 오늘
+(function(){
+  var d=(new URLSearchParams(location.search).get('d')||'').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!d){var k=new Date(Date.now()+9*3600e3);d=[0,k.getUTCFullYear(),k.getUTCMonth()+1,k.getUTCDate()];}
+  document.getElementById('day').textContent=(+d[2])+'월 '+(+d[3])+'일 오늘의 매대';
+  // 폰 종류에 맞는 스토어만 위에 두고, 2초 뒤 자동으로 이동(카톡 안 브라우저 포함)
+  var ua=navigator.userAgent, android=/Android/i.test(ua), ios=/iPhone|iPad|iPod/i.test(ua);
+  var play=document.getElementById('play'), app=document.getElementById('ios');
+  if(android){app.style.display='none';}
+  if(ios){play.style.display='none';}
+  var to=android?play.href:ios?app.href:null;
+  if(to) setTimeout(function(){location.href=to;},2000);
+})();
+</script>
+</body></html>
