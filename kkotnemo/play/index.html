@@ -1,0 +1,65 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>꽃피는 네모로직 — 같은 꽃 풀어 보기</title>
+<meta name="description" content="숫자로 칠하면 우리 꽃이 피는 그림 퍼즐. 친구가 피운 꽃을 같이 피워 보세요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="꽃피는 네모로직">
+<meta property="og:title" content="꽃피는 네모로직 — 같은 꽃, 너도 피워 볼래요?">
+<meta property="og:description" content="스도쿠처럼 숫자로 푸는 그림 퍼즐. 다 풀면 우리 꽃이 피어요">
+<meta property="og:image" content="https://namgunghwang.github.io/kkotnemo/play/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://namgunghwang.github.io/kkotnemo/play/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<style>
+*{box-sizing:border-box}
+body{margin:0;word-break:keep-all;font-family:-apple-system,'Pretendard','Apple SD Gothic Neo',sans-serif;color:#33291F;background:#FFF8EE;text-align:center}
+main{max-width:480px;margin:0 auto;padding:24px 16px 40px}
+.top{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 14px}
+.top img{width:48px;height:48px;border-radius:12px}
+.top b{font-size:22px}
+.flower{width:220px;height:220px;display:block;margin:0 auto;background:radial-gradient(circle,#FBE3EA 0 60%,transparent 61%)}
+h1{margin:12px 0 4px;font-size:26px}
+.mean{display:inline-block;margin:6px 0 10px;color:#C04A6C;font-size:20px;font-weight:700}
+.mean span{display:inline-block;margin-right:8px;padding:2px 10px;border-radius:99px;background:#E86A8C;color:#fff;font-size:15px}
+p{line-height:1.6;margin:8px 0;font-size:18px}
+.sub{color:#85725E;font-size:16px}
+.btn{display:block;margin:12px 0;padding:18px;border-radius:16px;font-size:20px;font-weight:800;text-decoration:none;color:#fff;background:#5E9E6A;box-shadow:0 5px 0 #3F7A4B}
+.btn.ios{background:#33291F;box-shadow:0 5px 0 #000}
+.note{color:#85725E;font-size:14px;margin-top:18px}
+</style></head>
+<body><main>
+<div class="top"><img src="icon.png" alt=""><b>꽃피는 네모로직</b></div>
+<img class="flower" id="art" src="flowers/tulip.webp" alt="">
+<h1 id="title">같은 꽃, 풀어 볼래요?</h1>
+<div class="mean" id="mean"></div>
+<p><b>스도쿠처럼 숫자로 푸는 그림 퍼즐이에요.</b><br>숫자만큼 칸을 칠하면 우리 꽃이 피어요.</p>
+<p class="sub">계산은 없어요 · 목숨도 기다리는 시간도 없어요</p>
+<a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.wouldburnstudio.kkotnemo">구글 플레이에서 받기</a>
+<a class="btn ios" id="ios" href="https://apps.apple.com/kr/app/id6828325043">앱 스토어에서 받기</a>
+<p class="note" id="how">받은 뒤 꽃밭에서 이 꽃을 찾아 풀어 보세요.</p>
+<p class="note"><a href="../">꽃피는 네모로직 고객 지원</a> · 우드번스튜디오</p>
+</main>
+<script>
+// 공유 링크 ?f=꽃id → 그 꽃 그림·이름·꽃말. 없거나 모르는 id 면 기본 문구
+(function(){
+  var F={"sprout": ["새싹", "첫걸음"], "bud": ["꽃봉오리", "곧 필 기쁨"], "clover": ["네잎클로버", "행운"], "tulip": ["튤립", "사랑의 고백"], "jindallae": ["진달래", "사랑의 기쁨"], "beotkkot": ["벚꽃", "아름다운 정신"], "jebikkot": ["제비꽃", "겸손"], "eunbangul": ["은방울꽃", "다시 찾은 행복"], "carnation": ["카네이션", "감사"], "gaenari": ["개나리", "희망"], "mongnyeon": ["목련", "고귀함"], "halmi": ["할미꽃", "슬픈 추억"], "mindeulle": ["민들레", "감사하는 마음"], "yeonkkot": ["연꽃", "깨끗한 마음"], "suguk": ["수국", "진심"], "mugunghwa": ["무궁화", "끝없는 사랑"], "bongseonhwa": ["봉선화", "나를 건드리지 마세요"], "napal": ["나팔꽃", "기쁜 소식"], "sunflower": ["해바라기", "기다림"], "rose": ["장미", "사랑"], "baekhap": ["백합", "순결"], "dahlia": ["다알리아", "우아함"], "gukhwa": ["국화", "성실"], "cosmos": ["코스모스", "순정"], "kkotmureut": ["꽃무릇", "이룰 수 없는 사랑"], "maendeurami": ["맨드라미", "시들지 않는 사랑"], "marigold": ["메리골드", "반드시 오고야 말 행복"], "gujeolcho": ["구절초", "어머니의 사랑"], "gwakkot": ["과꽃", "믿는 사랑"], "dongbaek": ["동백꽃", "누구보다 그대를 사랑해"], "poinsettia": ["포인세티아", "축복"], "suseonhwa": ["수선화", "자기 사랑"], "maehwa": ["매화", "고결한 마음"], "gunjaran": ["군자란", "고귀"], "cyclamen": ["시클라멘", "수줍음"], "boksucho": ["복수초", "영원한 행복"], "hojeopran": ["호접란", "당신을 사랑합니다"]};
+  var id=(new URLSearchParams(location.search).get('f')||'').replace(/[^a-z_]/g,'');
+  var f=F[id];
+  if(f){
+    document.getElementById('art').src='flowers/'+id+'.webp';
+    document.getElementById('art').alt=f[0];
+    document.getElementById('title').textContent='「'+f[0]+'」 같이 피워 볼래요?';
+    document.getElementById('mean').innerHTML='<span>꽃말</span>'+f[1];
+    document.getElementById('how').textContent='받은 뒤 꽃밭에서 「'+f[0]+'」을(를) 찾아 풀어 보세요. 아직 잠겨 있으면 앞의 꽃부터 피우면 열려요.';
+  }
+  // 폰 종류에 맞는 스토어만 보이고, 3초 뒤 자동으로 이동(카톡 안 브라우저 포함) — 꽃을 먼저 보게 손님왔냥(2초)보다 1초 길게
+  var ua=navigator.userAgent, android=/Android/i.test(ua), ios=/iPhone|iPad|iPod/i.test(ua);
+  var play=document.getElementById('play'), app=document.getElementById('ios');
+  if(android){app.style.display='none';}
+  if(ios){play.style.display='none';}
+  var to=android?play.href:ios?app.href:null;
+  if(to) setTimeout(function(){location.href=to;},3000);
+})();
+</script>
+</body></html>
